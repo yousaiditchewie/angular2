@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
       <h1>Inline HTML</h1>
       <fa-other></fa-other>
       <fa-another></fa-another>
+      <fa-another></fa-another>
   `,
   styleUrls: ['./app.component.css']
 })
