@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-event-binding',
-  templateUrl: './event-binding.component.html',
+  template: `
+    <button (click)="onClicked()">Click Me!</button>
+  `,
   styleUrls: ['./event-binding.component.css']
 })
-export class EventBindingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class EventBindingComponent {
+  @Output() clicked = new EventEmitter<string>();
+  onClicked() {
+    this.clicked.emit("It Works!");
   }
 
 }
